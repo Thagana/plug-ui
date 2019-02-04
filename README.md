@@ -1,4 +1,4 @@
-#plugFAA.js is a library for quick 
+# plugFAA.js is a library for quick 
 
 ** form insertion
 ** Animation
