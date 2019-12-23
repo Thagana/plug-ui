@@ -1,11 +1,8 @@
-#plugFAA.js is a library for quick 
+# Plug UI
+PlugUI is a UI generation UI Library form small projects
 
-** form insertion
-** Animation
-** Advert insertion
+## Forms
+the form uses bootstrap css framework
 
-# Forms
----
-<div id="myForm"></div>
----
-**currently there are options for bootstrap later we will include bulma , materialize and w3schools
+## Navbar
+the navbar uses bootstrap css framework
