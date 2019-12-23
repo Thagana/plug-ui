@@ -1,82 +1,88 @@
-let myForm  = document.getElementById('myForm');
+//Target Element for the form
 
-//Form container
-let container = document.createElement('div')
-container.setAttribute('class','container')
+class PlugUI {
 
+	 setContainer(){
+		//Form container
+		let container = document.createElement('div')
+		container.setAttribute('class','container');
+		return container;	
+	}
 
-//form hearder
-let header = document.createElement('h3')
-header.innerText = 'CONTACT FORM'
-header.setAttribute('class','text-center')
+	 setHeader(name = 'My Contact Form'){
+		//form hearder
+		let header = document.createElement('h3');
+		header.innerText = name;
+		header.setAttribute('class','text-center');
+		return header;	
+	}
 
-let form = document.createElement('form');
-//Insert Nessecary class and atrributes
-form.setAttribute('method','POST')
-form.setAttribute('action','/you-server')
-form.setAttribute('id','plugForms')
+	 createForm(endpoint = '/contact', id = 'plug-ui-form') {
+		let form = document.createElement('form');
+		//Insert Nessecary class and atrributes
+		form.setAttribute('method','POST')
+		form.setAttribute('action', endpoint)
+		form.setAttribute('id', id);
+		return form;	
+	}
 
-//container div
-let div = document.createElement('div')
-div.setAttribute('class','form-group')
-
-//div children
-//input attrubts and class
-let input = document.createElement('input')
-input.setAttribute('name','name')
-input.setAttribute('type','text')
-input.setAttribute('class','form-control')
-
-//label
-let Name = document.createElement('label')
-Name.innerText = 'Name'
-
-//div children
-//input Email
-let email = document.createElement('input')
-email.setAttribute('name','email')
-email.setAttribute('type','email')
-email.setAttribute('class','form-control')
-
-//label Email
-let Email = document.createElement('label')
-Email.innerText = 'Email'
-
-//TextArea
-let TextArea = document.createElement('textarea')
-TextArea.setAttribute('class','form-control')
-TextArea.setAttribute('name','textarea')
-TextArea.setAttribute('id','textareform')
-
-//textarea label
-let textAreaLabel = document.createElement('label')
-textAreaLabel.innerText = 'Message'
+	//form divider
+	 formDivider(){
+		//container div
+		let div = document.createElement('div')
+		div.setAttribute('class','form-group');
+		return div;	
+	}
 
 
-//button container
-let divButton = document.createElement('div')
-divButton.setAttribute('class','form-group')
+	/*  Form Element */
+	 createFormElements(name, type = 'text', id){
+		//input attrubts and class
+		let input = document.createElement('input')
+		input.setAttribute('name', name);
+		input.setAttribute('type', type);
+		input.setAttribute('class','form-control');
+		input.setAttribute('id', id);
 
-//Send button
-let sendButton = document.createElement('button')
-sendButton.setAttribute('type','submit')
-sendButton.setAttribute('class','btn btn-primary')
-sendButton.innerText = 'Send'
+		return input;	
+	}
 
+	 createFormLabel(label){
+		//label
+		let name = document.createElement('label')
+		name.innerText = label;
+		return name;	
+	}
+
+	 createSendButton(name = 'Send'){
+		//Send button
+		let sendButton = document.createElement('button')
+		sendButton.setAttribute('type','submit')
+		sendButton.setAttribute('class','btn btn-primary')
+		sendButton.innerText = name;
+
+		return sendButton;
+	}
+
+	appedToDOM(parentElement, childElement){
+		parentElement.appendChild(childElement);
+	}
+
+}
 
 //Add to document
-div.appendChild(Name)
-div.appendChild(input)
-div.appendChild(Email)
-div.appendChild(email)
-div.appendChild(textAreaLabel)
-div.appendChild(TextArea)
-divButton.appendChild(sendButton)
-form.appendChild(div)
-form.appendChild(divButton)
-container.appendChild(header)
-container.appendChild(form)
+// div.appendChild(Name)
+// div.appendChild(input)
+// div.appendChild(Email)
+// div.appendChild(email)
+// div.appendChild(textAreaLabel)
+// div.appendChild(TextArea)
+// divButton.appendChild(sendButton)
+// form.appendChild(div)
+// form.appendChild(divButton)
+// container.appendChild(header)
+// container.appendChild(form)
 
 //final
-myForm.appendChild(container)
-console.log(myForm)
+// myForm.appendChild(container)
+// console.log(myForm)
