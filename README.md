@@ -1,8 +1,23 @@
 # Plug UI
-PlugUI is a UI generation UI Library form small projects
 
-## Forms
-the form uses bootstrap css framework
+Pluggable UI component library for any front-end
 
-## Navbar
-the navbar uses bootstrap css framework
+## Getting started
+
+clone 
+```bash
+    $ git clone https://github.com/Thagana/plug-ui.git
+```
+cd
+
+```bash
+    $ cd plug-ui
+```
+install
+```bash
+    $ yarn install
+```
+Run
+```bash
+    $ ./node_modules/.bin/webpack-dev-server --open
+```
